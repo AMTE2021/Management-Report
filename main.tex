@@ -70,7 +70,7 @@ Note that we tried to have a good mixture between European-based and American-ba
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Reviewers}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-In addition to the organizers these program committee members reviewed at least one paper:
+In addition to the organizers, these program committee members reviewed at least one paper:
 \begin{itemize}
 \item Hartmut Kaiser, Center for Computation \& Technology at Louisiana State University, USA
 \item Didem Unat, Koç University, Turkey
@@ -100,10 +100,13 @@ The reviewers were assigned to the papers based on their expertise and avoiding 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Review process management}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-Each paper was reviewed by at least four independent reviewers selected from the initial program committee using EasyChair. Note that all reviewers are listed in Section~\ref{sec:committee}. The deadline for the reviewers was set to June 25th. However, we received the last missing review on June 29th. The organization committee discussed the one boarder line paper via email and made their final decision of accepted paper on June 29th. The final notification was sent to the authors using EasyChair on June 30th. The revised paper was requested by August 1st combined with the \LaTeX sources of the paper. All papers were uploaded to iThenticate for plagiarism check and the report was provided to the submitting author. The authors were asked to address the highlighted issues in the Ithenticate report and the reviewer’s comments before the submission of the camera ready version. 
+Each paper was reviewed by at least four independent reviewers selected from the initial program committee using EasyChair. Note that all reviewers are listed in Section~\ref{sec:committee}. The deadline for the reviewers was set to June 25th. However, we received the last missing review on June 29th. The organization committee discussed the one boarder line paper via email and made their final decision of accepted paper on June 29th. The final notification was sent to the authors using EasyChair on June 30th. The revised paper was requested by August 1st combined with the \LaTeX sources of the paper. All papers were uploaded to iThenticate for plagiarism check and the report was provided to the submitting author. The authors were asked to address the highlighted issues in the Ithenticate report and the reviewer’s comments before the submission of the camera-ready version. 
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Porgramm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
 \subsection{Talks}
 
@@ -111,20 +114,21 @@ Each paper was reviewed by at least four independent reviewers selected from the
     \item 9:00am - 9:05 am, Opening Remarks
     \item 9:05am - 10:05 am, Keynote Talk (Thomas Fahringer, UIBK)
     \item10:05am - 10:20am, Morning Break
-    \item 10:20am - 10:50am Selected paper talk
-    \item 10:50am - 11:20am, Selected paper talk
-    \item 11:20am - 11:50am, Selected paper talk
-    \item 11:50am - 12:20pm, Selected paper talk
+    \item 10:20am - 10:50am, Accelerating Messages by Avoiding Copies in an Asynchronous Task-based Programming Model 
+    \item 10:50am - 11:20am, An Experimental Study of SYCL Task Graph Parallelism for Large-Scale Machine Learning Workloads
+    \item 11:20am - 11:50am, Combining OpenMP tasking and target (GPU) offloading for productivity and performance on heterogeneous systems
+    \item 11:50am - 12:20pm, Understanding the Effect of Task Granularity on Execution Time in Asynchronous Many-Task Runtime Systems
     \item 12:20pm - 1:30pm, Lunch Break
     \item 1:30pm - 2:30pm, Invited talk (Daisy S. Hollman, Sandia National Laboratory, USA)
-    \item 2:30pm - 3:00pm, Selected paper talk
+    \item 2:30pm - 3:00pm, FleCSI 2.0: The Flexible Computational Science Infrastructure Project
     \item 3:00pm - 3:30pm, Selected paper talk
-    \item 3:30pm -3:45 pm Afternoon break
-    \item 3:45pm - 4:45pm, Panel
+    \item 3:30pm - 4:30pm, Panel
 \end{itemize}
 
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Panel}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
 Moderator: Irina Demeshko, Los Alamos National Laboratory, USA\\
 
@@ -152,13 +156,16 @@ Panel's chosen questions:
     What sort of language support is needed for AMT programming?
     \begin{itemize}
         \item  What advantage do newer languages like Go, Julia, etc., have for AMT programming, and can/should they displace C++ for scientific applications?
-        \item Many languages have added “await” or some variant as new keywords for processing asynchronous code. How important is this feature for the success of the AMT paradigm?
+        \item Many languages have added “await” or some variants as new keywords for processing asynchronous code. How important is this feature for the success of the AMT paradigm?
     \end{itemize}
     \item
     How to choose which AMT programming model among others?
 \end{itemize}
 
-\section{List of accpeted papers}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{List of accepted papers}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
 \begin{enumerate}
     \item Accelerating Messages by Avoiding Copies in an Asynchronous Task-based Programming Model \\
@@ -172,7 +179,7 @@ Panel's chosen questions:
     \begin{center}
         \textbf{Abstract}
     \end{center}
-    We evaluate the use of OpenMP tasking with target (GPU) offloading as a potential solution for programming productivity and performance on heterogeneous systems. As test case, We use one of the most popular and widely used BLAS Level-3 routines, triangular solver(TRSM). To benefit from the heterogeneity of the current HPC systems, we propose a different parallelization of the algorithm by using a non uniform decomposition of the problem. We use target (GPU) offloading inside OpenMP tasks to deal with the heterogeneity found in the hardware. This new approach is able to outperform the state-of-the-art algorithms, which use a uniform decomposition of the data, on both: CPU only and CPU+GPU systems, reaching speedups of up to one order of magnitude. The performance achieved by this approach is faster than the IBM ESSL math library on CPU and competitive w.r.t. a highly optimized heterogeneous CUDA version. For the performance analysis, we have used one node of the ORNL’s supercomputer Summit.
+    We evaluate the use of OpenMP tasking with target (GPU) offloading as a potential solution for programming productivity and performance on heterogeneous systems. As test case, We use one of the most popular and widely used BLAS Level-3 routines, triangular solver(TRSM). To benefit from the heterogeneity of the current HPC systems, we propose a different parallelization of the algorithm by using a non-uniform decomposition of the problem. We use target (GPU) offloading inside OpenMP tasks to deal with the heterogeneity found in the hardware. This new approach is able to outperform the state-of-the-art algorithms, which use a uniform decomposition of the data, on both: CPU only and CPU+GPU systems, reaching speedups of up to one order of magnitude. The performance achieved by this approach is faster than the IBM ESSL math library on CPU and competitive w.r.t. a highly optimized heterogeneous CUDA version. For the performance analysis, we have used one node of the ORNL’s supercomputer Summit.
     \item FleCSI 2.0: The Flexible Computational Science Infrastructure Project\\
     Authors: Ben Bergen, Irina Demeshko, Charles Ferenbaugh, Davis Herring, Li-Ta Lo, Julien Loiseau, Navamita Ray and Andrew Reisner
     \begin{center}
