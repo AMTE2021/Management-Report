@@ -1,11 +1,23 @@
 \documentclass{article}
 \usepackage[utf8]{inputenc}
 
-\usepackage{a4wide}
+\usepackage{fancyhdr}
+\usepackage{color}
+\usepackage{etoolbox}
+%\usepackage{a4wide}
+\usepackage{graphicx}
+
+\pagestyle{fancy}
+\fancyhf{}
+%\fancyhead[R]{Dr. Patrick Diehl}
+\fancyhead[c]{AMT21 - Management report}
+\fancyfoot[C]{(\thepage /\pageref{LastPage})}
+\fancyfoot[R]{\today}
+\fancyfoot[L]{\includegraphics[scale=1]{by-nc-sa}}
 
 
 \title{AMTE21 - Management report}
-\author{Patrick Diehl \\ Irina Demeshko \\ Zhara Khatami \\ Steven R. Brandt \\ Parsa Amini}
+\author{Patrick Diehl \\ Irina Demeshko \\ Zahra Khatami \\ Steven R. Brandt \\ Parsa Amini}
 \date{\today}
 
 \begin{document}
@@ -15,7 +27,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Key indicators}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-The first submission deadline was May 7th with an extension to May 14th. We received three full papers at the first extension. Note that the workshop does not accept short papers. The deadline was extended to June 14th, and we received eight submissions at the final deadline. In total, eight papers were submitted on June 14th and five papers were accepted ($62.5$\%). The workshop was scheduled at X, and we had an average attendance of x persons. The keynote was given by Thomas Fahringer (University of Innsbruck, Austria) and x persons attended the keynote. The invited talks was given by Daisy Hollman (Google) and x persons attended. The workshops closed with a panel discussion, and x persons attended the panel discussion. More details are available on the workshop's webpage\footnote{https://amte2021.stellar-group.org/}.
+The first submission deadline was May 7th with an extension to May 14th. We received three full papers at the first extension. Note that the workshop does not accept short papers. The deadline was extended to June 14th, and we received eight submissions at the final deadline. In total, eight papers were submitted on June 14th and five papers were accepted ($62.5$\%). The workshop was scheduled at August 30th, and we had an average attendance of 10 persons for the talks. The keynote was given by Thomas Fahringer (University of Innsbruck, Austria) and 12 persons attended the keynote. The invited talks was given by Daisy Hollman (Google) and 18 persons attended. The workshops closed with a panel discussion, and 14 persons attended the panel discussion. More details are available on the workshop's webpage\footnote{https://amte2021.stellar-group.org/}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Committees}
@@ -100,11 +112,11 @@ The reviewers were assigned to the papers based on their expertise and avoiding 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Review process management}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-Each paper was reviewed by at least four independent reviewers selected from the initial program committee using EasyChair. Note that all reviewers are listed in Section~\ref{sec:committee}. The deadline for the reviewers was set to June 25th. However, we received the last missing review on June 29th. The organization committee discussed the one boarder line paper via email and made their final decision of accepted paper on June 29th. The final notification was sent to the authors using EasyChair on June 30th. The revised paper was requested by August 1st combined with the \LaTeX sources of the paper. All papers were uploaded to iThenticate for plagiarism check and the report was provided to the submitting author. The authors were asked to address the highlighted issues in the Ithenticate report and the reviewer’s comments before the submission of the camera-ready version. 
+Each paper was reviewed by at least four independent reviewers selected from the initial program committee using EasyChair. Note that all reviewers are listed in Section~\ref{sec:committee}. The deadline for the reviewers was June 25th. However, we received the last missing review on June 29th. The organization committee discussed the one borderline paper via email and made their final decision on June 29th. The final notifications were sent to the authors using EasyChair on June 30th. The revised paper was requested by August 1st combined with the \LaTeX sources of the paper. All papers were uploaded to iThenticate for plagiarism check and the report was provided to the submitting author. The authors were asked to address the highlighted issues in the Ithenticate report and the reviewer’s comments before the submission of the camera-ready version. 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Porgramm}
+\section{Program}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
@@ -168,7 +180,8 @@ Panel's chosen questions:
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Keynote}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-On using modern C++ and nested recursive task parallelism for HPC applications with AllScale, Thomas Fahringer, Institute of Computer Science, University of Innsbruck, Austria
+On using modern C++ and nested recursive task parallelism for HPC applications with AllScale\\
+Thomas Fahringer, Institute of Computer Science, University of Innsbruck, Austria
     \begin{center}
         \textbf{Abstract}
     \end{center}
@@ -177,7 +190,8 @@ Contemporary parallel programming approaches often rely on well-established para
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Invited talk}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-The Past, Present, and Future of Asynchrony in C++,  Daisy S. Hollman, Google, USA
+The Past, Present, and Future of Asynchrony in C++\\  
+Daisy S. Hollman, Google, USA
     \begin{center}
         \textbf{Abstract}
     \end{center}
@@ -195,7 +209,7 @@ In this talk, we’ll discuss the evolution of past and present abstractions for
     \begin{center}
         \textbf{Abstract}
     \end{center}
-    Communication is critical to the scalable and efficient performance of scientific simulations on extreme scale computing systems. Part of the promise of task-based programming models is that they can naturally overlap communication with c    omputation and exploit locality between tasks. Copy based semantics using eager communication protocols easily enable such asynchrony by alleviating the responsibility of buffer management from the user, both on the sender and the receiver. However, these semantics increase memory allocations and copies and in turn affect application memory footprint and performance, especially with large messages. In this work we extend the Charm++ programming model with so-called ``zero copy'' messaging semantics. These semantics work on user-provided buffers and do not semantically require copies by either the user or the runtime system. This ena    bles in-place data movement of various kinds. We motivate our work by reviewing the existing messaging models supported by Charm++, identify their semantic shortcomings with respect to large message handling, and define new APIs for communication based on RDMA capabilities. We demonstrate the utility of our new communication interfaces by the use of benchmarks written in Charm++ and AMPI. The result is up to 90\% of message latency improvement and nearly 2x lower peak mem    ory usage.
+    Communication is critical to the scalable and efficient performance of scientific simulations on extreme scale computing systems. Part of the promise of task-based programming models is that they can naturally overlap communication with computation and exploit locality between tasks. Copy based semantics using eager communication protocols easily enable such asynchrony by alleviating the responsibility of buffer management from the user, both on the sender and the receiver. However, these semantics increase memory allocations and copies and in turn affect application memory footprint and performance, especially with large messages. In this work we extend the Charm++ programming model with so-called ``zero copy'' messaging semantics. These semantics work on user-provided buffers and do not semantically require copies by either the user or the runtime system. This enables in-place data movement of various kinds. We motivate our work by reviewing the existing messaging models supported by Charm++, identify their semantic shortcomings with respect to large message handling, and define new APIs for communication based on RDMA capabilities. We demonstrate the utility of our new communication interfaces by the use of benchmarks written in Charm++ and AMPI. The result is up to 90\% of message latency improvement and nearly 2x lower peak mem    ory usage.
     \item Combining OpenMP tasking and target (GPU) offloading for productivity and performance on heterogeneous systems \\
     Authors: Pedro Valero-Lara, Jungwon Kim, Oscar Hernandez and Jeffrey Vetter
     \begin{center}
@@ -207,7 +221,7 @@ In this talk, we’ll discuss the evolution of past and present abstractions for
     \begin{center}
         \textbf{Abstract}
     \end{center}
-    The FleCSI 2.0 programming system supports multiphysics application development through a runtime abstraction layer, and by providing core topology types that can be customized for speciﬁc nu-merical methods. The abstraction layer provides a single-source programming interface for distributed and shared-memory data parallelism through task and kernel execution, and has been demonstrated to introduce virtually no runtime overhead. FleCSI’s core topology types represent a rich set of basic data structures that can be specialized to create application-facing interfaces for a variety of different physics packages. Using the FleCSI control and data models, it is straightforward to compose multiple packages to create full multiphysics applications. When used with the Legion backend, FleCSI offers extended runtime analysis that can increase task concurrency, facilitate load balancing, and allow for portability across heterogeneous computing architectures.
+    The FleCSI 2.0 programming system supports multiphysics application development through a runtime abstraction layer, and by providing core topology types that can be customized for specifc numerical methods. The abstraction layer provides a single-source programming interface for distributed and shared-memory data parallelism through task and kernel execution, and has been demonstrated to introduce virtually no runtime overhead. FleCSI’s core topology types represent a rich set of basic data structures that can be specialized to create application-facing interfaces for a variety of different physics packages. Using the FleCSI control and data models, it is straightforward to compose multiple packages to create full multiphysics applications. When used with the Legion backend, FleCSI offers extended runtime analysis that can increase task concurrency, facilitate load balancing, and allow for portability across heterogeneous computing architectures.
     \item An Experimental Study of SYCL Task Graph Parallelism for Large-Scale Machine Learning Workloads\\
     Authors: Cheng-Hsiang Chiu, Dian-Lun Lin and Tsung-Wei Huang
     \begin{center}
@@ -223,8 +237,5 @@ Authors: Shahrzad Shirzad, Rod Tohid, Alireza Kheirkhahan, Bibek Wagle and Hartm
     Task granularity is a key factor in determining the performance of asynchronous many-task (AMT) runtime systems. The over-head of scheduling an excessive number of tasks with smaller granularities causes performance degradation while creating a few larger tasks leads to starvation and therefore under-utilization of resources. In this paper, we developed an analytical model of the execution time of an application with balanced parallel for-loops in terms of grain size, and number of cores. The parameters of this model mostly depend on the runtime and the architecture. We introduce an approach to suggest a range of possible grain sizes to achieve the best performance based on the proposed model. To the best of our knowledge, our analytical model is the first to explain the relationship between the execution time in terms of grain size, runtime, and physical characteristics of the machine in an asynchronous runtime system.
 \end{enumerate}
 
-\section{Keynote and Invited talk}
-
-
-
+\label{LastPage}  
 \end{document}
